@@ -129,6 +129,8 @@ npm test
 | 2026-10-01 | 通道自检（强制弹，忽略前台） | ✅ 截图确认，trace `shown forced:true` |
 | 2026-10-01 | 回合结束 + 会话摘要（真实路径） | ✅ 截图确认，trace `shown forced:false`，标题「任务已完成」，正文含会话名 |
 | 2026-10-01 | 前台抑制（真实场景） | ✅ trace `suppressed window-in-front` |
+| 2026-10-11 | 重启后 trace 落到新路径 | ✅ `host-apply` 记录 `~/.dsh/desktop-notify/trace.jsonl`，`traceEnabled:true` |
+| 2026-10-11 | **提问类**通知（真实触发） | ✅ trace `event` 抓到完整问题正文；当时正在看客户端 → `suppressed window-in-front`（按设计不弹） |
 | 待测 | 等待授权（命令类 / 文件类） | ⏳ 复用同一段 `raiseOnce` + 分类逻辑，冒烟测试已覆盖 |
 
 ## 已知限制

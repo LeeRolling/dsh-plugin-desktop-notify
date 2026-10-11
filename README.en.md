@@ -144,6 +144,8 @@ subagent silence, the cold-idle edge, click-to-focus and the forced self-test.
 | 2026-10-01 | Channel self-test (forced, focus ignored) | ✅ screenshot, trace `shown forced:true` |
 | 2026-10-01 | Turn end + session summary (real path) | ✅ screenshot, trace `shown forced:false` |
 | 2026-10-01 | Front gate (real scenario) | ✅ trace `suppressed window-in-front` |
+| 2026-10-11 | Trace lands on the new path after restart | ✅ `host-apply` records `~/.dsh/desktop-notify/trace.jsonl`, `traceEnabled:true` |
+| 2026-10-11 | **Question** notification (really triggered) | ✅ the `event` line captured the full question text; the client was in front, so `suppressed window-in-front` (quiet by design) |
 | pending | Waiting for approval (command / file) | ⏳ same `raiseOnce` path, covered by the smoke test |
 
 ## Known limitations
