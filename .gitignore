@@ -1,0 +1,21 @@
+# 依赖 / 构建产物（本插件无构建步骤）
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# 测试临时产物
+*.log
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 本仓库不含任何二进制素材（截图请放在 issue / release 里，不进仓库）
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif

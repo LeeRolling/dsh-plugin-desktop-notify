@@ -1,0 +1,53 @@
+{
+  "name": "dsh-plugin-desktop-notify",
+  "version": "0.1.0",
+  "description": "Context-aware desktop notifications for DeepSeek Harness: turn completion, waiting-for-approval, waiting-for-answer — with a per-situation summary, and no interruption while the client is in front. 上下文感知的桌面通知：回合完成 / 等待授权 / 等待回答，按情况给出任务摘要，客户端在前台时不打扰。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/paths.test.mjs && node test/client.test.mjs",
+    "trace": "node tools/trace.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "notification",
+    "desktop-notification",
+    "windows",
+    "approval"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeeRolling/dsh-plugin-desktop-notify.git"
+  },
+  "homepage": "https://github.com/LeeRolling/dsh-plugin-desktop-notify",
+  "bugs": {
+    "url": "https://github.com/LeeRolling/dsh-plugin-desktop-notify/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
