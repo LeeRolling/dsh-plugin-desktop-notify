@@ -146,7 +146,9 @@ subagent silence, the cold-idle edge, click-to-focus and the forced self-test.
 | 2026-10-01 | Front gate (real scenario) | ✅ trace `suppressed window-in-front` |
 | 2026-10-11 | Trace lands on the new path after restart | ✅ `host-apply` records `~/.dsh/desktop-notify/trace.jsonl`, `traceEnabled:true` |
 | 2026-10-11 | **Question** notification (really triggered) | ✅ the `event` line captured the full question text; the client was in front, so `suppressed window-in-front` (quiet by design) |
-| pending | Waiting for approval (command / file) | ⏳ same `raiseOnce` path, covered by the smoke test |
+| 2026-10-11 | **Waiting for approval (command)** (real approval event) | ✅ screenshot + trace `shown forced:false`: title `有任务需要授权`, body `需要授权执行命令（工具 pwsh）` + the purpose summary (`escalate sandbox to <mode>:` prefix correctly stripped) |
+| 2026-10-11 | The GitHub-installed release in real use | ✅ several `shown` (turn end) produced by the release copy — end-to-end loop closed |
+| pending | Waiting for approval (**file** `write` / `edit`) | ⏳ same `raiseOnce` + classification path, not yet triggered by a real event |
 
 ## Known limitations
 

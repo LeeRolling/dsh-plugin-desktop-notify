@@ -131,7 +131,9 @@ npm test
 | 2026-10-01 | 前台抑制（真实场景） | ✅ trace `suppressed window-in-front` |
 | 2026-10-11 | 重启后 trace 落到新路径 | ✅ `host-apply` 记录 `~/.dsh/desktop-notify/trace.jsonl`，`traceEnabled:true` |
 | 2026-10-11 | **提问类**通知（真实触发） | ✅ trace `event` 抓到完整问题正文；当时正在看客户端 → `suppressed window-in-front`（按设计不弹） |
-| 待测 | 等待授权（命令类 / 文件类） | ⏳ 复用同一段 `raiseOnce` + 分类逻辑，冒烟测试已覆盖 |
+| 2026-10-11 | **等待授权（命令类）**通知（真实审批事件） | ✅ 截图 + trace `shown forced:false`：标题「有任务需要授权」，正文 `需要授权执行命令（工具 pwsh）` + 用途摘要（`escalate sandbox to <mode>:` 前缀被正确剥掉） |
+| 2026-10-11 | 从 GitHub 安装的发布版真实使用 | ✅ 多条来自发布版拷贝的 `shown`（回合结束），端到端闭环 |
+| 待测 | 等待授权（**文件类** `write` / `edit`） | ⏳ 共用同一段 `raiseOnce` + 分类逻辑，尚未被真实事件触发 |
 
 ## 已知限制
 
